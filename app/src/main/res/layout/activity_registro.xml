@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.RegistroActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mt_toolbar_recover_password">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/tv_email_register"
+                style="@style/MaterialTextViewTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:textSize="18sp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/tv_password_register"
+                style="@style/MaterialTextViewTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="18dp"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email_register" />
+
+            <EditText
+                android:id="@+id/tv_confirm_password"
+                style="@style/MaterialTextViewTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="18dp"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_password_register" />
+
+
+
+            <TextView
+                android:id="@+id/tv_title_email_registr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="E-mail"
+                android:textColor="@color/colorNameTextView"
+                app:layout_constraintBottom_toTopOf="@+id/tv_email_register"
+                app:layout_constraintStart_toStartOf="@+id/tv_email_register" />
+
+            <TextView
+                android:id="@+id/tv_title_password_registr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="Senha"
+                android:textColor="@color/colorNameTextView"
+                app:layout_constraintBottom_toTopOf="@+id/tv_password_register"
+                app:layout_constraintStart_toStartOf="@+id/tv_password_register" />
+
+            <TextView
+                android:id="@+id/tv_title_confirm_password_registr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="Comfima senha"
+                android:textColor="@color/colorNameTextView"
+                app:layout_constraintBottom_toTopOf="@+id/tv_confirm_password"
+                app:layout_constraintStart_toStartOf="@+id/tv_confirm_password" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_send"
+                style="@style/MaterialButtonTheme"
+                android:text="CADASTRAR"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_confirm_password"
+                app:strokeWidth="1dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/mt_toolbar_recover_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Registro"
+        app:titleTextAppearance="@style/MaterialToolbarMenuStyleThemescreens"
+        app:titleTextColor="@color/color_toolbar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

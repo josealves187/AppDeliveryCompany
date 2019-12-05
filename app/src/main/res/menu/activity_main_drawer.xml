@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_qrcode"
+        android:icon="@drawable/ic_qrcode"
+        android:title="QRCODE" />
+
+    <item
+        android:id="@+id/nav_anucio"
+        android:icon="@drawable/iconfinder_cart"
+        android:title="@string/menu_tools" />
+
+    <item
+        android:id="@+id/nav_endereco"
+        android:icon="@drawable/ic_add_location_24dp"
+        android:title="@string/menu_gallery" />
+
+    <item
+        android:id="@+id/nav_pefil"
+        android:icon="@drawable/ic_person_24dp"
+        android:title="@string/menu_slideshow" />
+
+
+</menu>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="56dp">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mt_toolbar_profile">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_registration_dat"
+                    style="@style/MaterialTexteViewTheme"
+                    android:layout_width="0dp"
+                    android:text="@string/tv_title_profile_Registration_data"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/aciv_profile"
+                    app:layout_constraintStart_toEndOf="@+id/aciv_profile"
+                    app:layout_constraintTop_toTopOf="@+id/aciv_profile" />
+
+
+
+                <TextView
+                    android:id="@+id/tv_title_contact_us"
+                    style="@style/MaterialTexteViewTheme"
+                    android:layout_width="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:text="@string/tv_title_profile_contact_us"
+                    app:layout_constraintBottom_toBottomOf="@+id/aciv_calculator_qrcode"
+                    app:layout_constraintStart_toEndOf="@+id/aciv_calculator_qrcode"
+                    app:layout_constraintTop_toTopOf="@+id/aciv_calculator_qrcode" />
+
+
+                <TextView
+                    android:id="@+id/tv_title_about_the_app"
+                    style="@style/MaterialTexteViewTheme"
+                    android:layout_width="0dp"
+                    android:text="@string/tv_title_profile_about"
+                    app:layout_constraintBottom_toBottomOf="@+id/aciv_i_usage_policies_profile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/aciv_i_usage_policies_profile"
+                    app:layout_constraintTop_toTopOf="@+id/aciv_i_usage_policies_profile"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/tv_title_exit_profile"
+                    style="@style/MaterialTexteViewTheme"
+                    android:layout_width="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="@string/tv_title_profile_exit"
+                    app:layout_constraintBottom_toBottomOf="@+id/aciv_i_exit_profile"
+                    app:layout_constraintStart_toEndOf="@+id/aciv_i_exit_profile"
+                    app:layout_constraintTop_toTopOf="@+id/aciv_i_exit_profile" />
+
+                <View
+                    android:id="@+id/v_menu_profile"
+                    style="@style/MaterialViewStyleTheme"
+                    android:background="#B9B9B9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_registration_dat" />
+
+                <View
+                    android:id="@+id/v_menu_title_about"
+                    style="@style/MaterialViewStyleTheme"
+                    android:background="#B9B9B9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_contact_us" />
+
+
+                <View
+                    android:id="@+id/v_usage_policies"
+                    style="@style/MaterialViewStyleTheme"
+                    android:background="#B9B9B9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_about_the_app" />
+
+
+
+                <View
+                    style="@style/MaterialViewStyleTheme"
+                    android:layout_marginBottom="26dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_exit_profile" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/aciv_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="26dp"
+                    android:src="@drawable/ic_menu_profile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/aciv_entry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="26dp"
+                    android:src="@drawable/ic_arrow_indication"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_registration_dat"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_registration_dat" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/aciv_calculator_qrcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_tutorial_and_faq_profile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/v_menu_profile" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="26dp"
+                    android:src="@drawable/ic_arrow_indication"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_title_contact_us"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_title_contact_us" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/aciv_i_usage_policies_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_about_profile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/v_menu_title_about" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="26dp"
+                    android:src="@drawable/ic_arrow_indication"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_title_about_the_app"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_title_about_the_app" />
+
+
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/aciv_i_exit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="56dp"
+                    android:src="@drawable/ic_exit_profile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/v_usage_policies" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/mt_toolbar_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:title="MENU"
+        app:titleTextColor="@color/color_toolbar_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextAppearance="@style/MaterialToolbarMenuStyleTheme">
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

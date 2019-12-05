@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="br.com.jose.alves.freedeliverycliente">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Activity.SobreActivity"></activity>
+        <activity android:name=".Activity.DeliveryReceivedActivity" />
+        <activity android:name=".Activity.RetrieveItemsActivity" />
+        <activity android:name=".Activity.ReceiveMerchandiseActivity" />
+        <activity android:name=".Activity.MarketAddressActivity" />
+        <activity android:name=".Activity.RegistrationDataActivity" />
+        <activity
+            android:name=".Activity.UserAddress"
+            android:parentActivityName=".Activity.CadastroActivityDados"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CadastroActivityDados"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SimpleSlideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Intro" />
+        <activity
+            android:name=".Activity.RegistroActivity"
+            android:parentActivityName=".Activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.Home.MainActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="InnerclassSeparator" />
+    </application>
+    <uses-feature android:name="com.android.hardware.Camera.focus" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+</manifest>

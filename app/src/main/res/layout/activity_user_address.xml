@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.UserAddress">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mt_toolbar_address">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_title_registr_address"
+                    style="@style/MaterialTitleTextViewGuidancePhotoTheme"
+                    android:gravity="start"
+                    android:text="Endereço"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_cep_receive_home"
+                    style="@style/MaterialTextRegistration"
+                    android:fontFamily="@font/quicksand_regular"
+                    android:text="@string/tv_cep_name_address"
+                    app:layout_constraintBottom_toTopOf="@+id/til_cep_address_registe"
+                    app:layout_constraintStart_toStartOf="@+id/til_cep_address_registe" />
+
+
+                <TextView
+                    android:id="@+id/tv_public_place_address_receive_home"
+                    style="@style/MaterialTextRegistration"
+                    android:text="@string/tv_public_place_address"
+                    app:layout_constraintBottom_toTopOf="@+id/til_public_place_receive"
+                    app:layout_constraintStart_toStartOf="@+id/til_public_place_receive" />
+
+                <TextView
+                    android:id="@+id/tv_number_receive_home"
+                    style="@style/MaterialTextRegistration"
+                    android:text="@string/tv_number_address"
+                    app:layout_constraintBottom_toTopOf="@+id/til_number_registe"
+                    app:layout_constraintStart_toStartOf="@+id/til_number_registe" />
+
+
+                <TextView
+                    android:id="@+id/tv_title_city_receive_home"
+                    style="@style/MaterialTextRegistration"
+                    android:text="@string/tv_title_city_address"
+                    app:layout_constraintBottom_toTopOf="@+id/til_city_registe"
+                    app:layout_constraintStart_toStartOf="@+id/til_city_registe" />
+
+                <TextView
+                    android:id="@+id/tv_title_complement_receive_home"
+                    style="@style/MaterialTextRegistration"
+                    android:text="@string/tv_title_complement_address"
+                    app:layout_constraintBottom_toTopOf="@+id/til_complement_registe"
+                    app:layout_constraintStart_toStartOf="@+id/til_complement_registe" />
+
+
+                <TextView
+                    android:id="@+id/tv_title_neighborhood_address"
+                    style="@style/MaterialTextRegistration"
+                    android:text="@string/tv_title_neighborhood_address"
+                    app:layout_constraintBottom_toTopOf="@+id/til_neighborhood_registe"
+                    app:layout_constraintStart_toStartOf="@+id/til_neighborhood_registe" />
+
+
+                <TextView
+                    android:id="@+id/tv_title_uf"
+                    style="@style/MaterialTextRegistration"
+                    android:text="@string/tv_title_uf"
+                    app:layout_constraintBottom_toTopOf="@+id/til_confirm_uf_registe"
+                    app:layout_constraintStart_toStartOf="@+id/til_confirm_uf_registe" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_send_address"
+                    style="@style/MaterialButtonTheme"
+                    android:layout_marginBottom="36dp"
+                    android:text="@string/tv_title_advance"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_confirm_uf_registe"
+                    app:strokeWidth="1dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cep_address_registe"
+                    style="@style/MaterialEditTextThemed"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_registr_address">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_cep_address_receive_home"
+                        style="@style/TextInputTextTheme"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="9" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_public_place_receive"
+                     style="@style/MaterialEditTextThemed"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_cep_address_registe">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_public_place_registe"
+                        style="@style/TextInputTextTheme"
+                        android:imeOptions="actionNext"
+                        android:inputType="textImeMultiLine" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_number_registe"
+                     style="@style/MaterialEditTextThemed"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_public_place_receive">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_number_receive_home"
+                        style="@style/TextInputTextTheme"
+                        android:imeOptions="actionNext"
+                        android:inputType="number" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_complement_registe"
+                     style="@style/MaterialEditTextThemed"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_number_registe">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_complement"
+                        style="@style/TextInputTextTheme"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_neighborhood_registe"
+                     style="@style/MaterialEditTextThemed"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_complement_registe">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_neighborhood_receive"
+                        style="@style/TextInputTextTheme"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_city_registe"
+                     style="@style/MaterialEditTextThemed"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_neighborhood_registe">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_city_receive"
+                        style="@style/TextInputTextTheme"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_confirm_uf_registe"
+                     style="@style/MaterialEditTextThemed"
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_city_registe">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_confirm_uf_receive"
+                        style="@style/TextInputTextTheme"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="2"
+                        android:textAllCaps="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/mt_toolbar_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/title_toolbar_address"
+        app:titleTextAppearance="@style/MaterialToolbarMenuStyleThemescreens" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

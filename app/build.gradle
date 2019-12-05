@@ -1,0 +1,101 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "br.com.jose.alves.freedeliverycliente"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.navigation:navigation-fragment:2.1.0'
+    implementation 'androidx.navigation:navigation-ui:2.1.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //firebase
+    implementation 'com.google.firebase:firebase-analytics:17.2.1'
+    implementation 'com.google.firebase:firebase-core:17.2.1'
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'com.google.firebase:firebase-database:19.2.0'
+    implementation 'com.google.firebase:firebase-storage:19.1.0'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //recyclerview
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
+    /*Dependência para arredondamento de imagens*/
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
+    //design
+    implementation 'com.android.support:design:28'
+
+    implementation "com.google.android.material:material:1.2.0-alpha02"
+
+    //android bootstrap
+    implementation 'com.beardedhen:androidbootstrap:2.3.2'
+
+    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'
+
+    // slide
+    implementation 'com.heinrichreimersoftware:material-intro:2.0.0'
+
+    implementation('com.journeyapps:zxing-android-embedded:3.6.0@aar')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.zxing:core:3.3.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+
+
+    // responsavel por valida cpf
+    implementation 'br.com.caelum.stella:caelum-stella-core:2.1.2'
+
+    /* Para utilizar a biblioteca Retrofit 2.6 */
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+
+    /* Para utilizar a biblioteca Gson  com a Retrofit 2.6 */
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+
+    //Gsom
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
+
+    //bumptech
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    //easypermissions
+    implementation 'pub.devrel:easypermissions:3.0.0'
+
+    //animação
+    implementation "com.airbnb.android:lottie:3.0.7"
+
+}
+apply plugin: 'com.google.gms.google-services'

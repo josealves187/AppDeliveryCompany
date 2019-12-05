@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#cccccc</color>
+    <color name="colorAccent">#A416E6</color>
+
+    <!-- Customizando Cor textos de destaque  -->
+    <color name="colorTextView">#A416E6</color>
+
+    <!-- Customizando  Cor das Bordas botoens -->
+    <color name="colorborder">#000</color>
+
+    <!-- Customizando  QRCode -->
+    <color name="black">#616161</color>
+    <color name="white">#ffffff</color>
+
+    <!-- Customizando Caixas de diálogo -->
+    <color name="colorTitleTextView">#A416E6</color>
+    <color name="colorTextTextView">#7E7E7E</color>
+    <color name="colorTextInputLayoutTheme">#A416E6</color>
+
+    <!-- Customizando dos Splash-->
+    <color name="colorFundSplash">#ffff</color>
+
+    <!-- Customizando dos CardView-->
+    <color name="colorStrokeCardView">#A416E6</color>
+
+    <!-- Customizando dos toolbar-->
+    <color name="color_toolbar_menu">#A416E6</color>
+    <color name="color_toolbar">#636363</color>
+
+    <!-- Customizando dos TextView-->
+    <color name="colorNameTextView">#616161</color>
+
+    <!-- Customizando dos Button Adapter Attendance-->
+    <color name="colorButtonAdapterAttendance">#000</color>
+
+    <!-- Customizando os botoes do Ação de Adapter -->
+    <color name="colorTextButtonAdapete">#616161</color>
+    <color name="colorTextButton">#A416E6</color>
+    <color name="colorButtAction">#616161</color>
+
+    <!-- Customizando  menu Home -->
+    <color name="colorTitleMenu">#616161</color>
+    <color name="colorItemSelectedMenu">#A416E6</color>
+    <color name="colorItemNotSelectedMenu">#616161</color>
+
+    <color name="bg_row_background">#fa315b</color>
+    <color name="item_name">#535353</color>
+    <color name="description">#a9a9a9</color>
+
+    <!-- Customizando  tela login -->
+    <color name="colorBorderBox">#A416E6</color>
+</resources>

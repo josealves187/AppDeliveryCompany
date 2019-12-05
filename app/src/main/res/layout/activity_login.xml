@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".Activity.LoginActivity">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+
+            <ImageView
+                android:id="@+id/dd"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_screen_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/dd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/colorStrokeCardView"
+                app:strokeWidth="1dp">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/tv_title_Passwor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="@string/password_login"
+                        android:textColor="@color/colorNameTextView"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_Passwor"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_Passwor"
+                        app:layout_constraintHorizontal_bias="0.07"
+                        app:layout_constraintStart_toEndOf="@+id/tv_Passwor"
+                        app:layout_constraintStart_toStartOf="@+id/tv_Passwor" />
+
+                    <TextView
+                        android:id="@+id/tv_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="42dp"
+                        android:text="@string/tv_title_login"
+                        android:textColor="@color/colorNameTextView"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_title_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="@string/title_email_login"
+                        android:textColor="@color/colorNameTextView"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_email"
+                        app:layout_constraintStart_toStartOf="@+id/tv_email" />
+
+                    <TextView
+                        android:id="@+id/tv_title_forgot_my_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:text="@string/forgot_my_password_login"
+                        android:textColor="@color/colorNameTextView"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_Passwor"
+                        app:layout_constraintStart_toStartOf="@+id/tv_Passwor"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_Passwor" />
+
+                    <TextView
+                        android:id="@+id/tv_title_cadastre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="@string/tv_register_login_Not_registered_yet"
+                        android:textColor="@color/colorNameTextView"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/btn_register"
+                        app:layout_constraintEnd_toEndOf="@+id/btn_register"
+                        app:layout_constraintStart_toStartOf="@+id/btn_register"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_input" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_input"
+                        style="@style/MaterialButtonTheme"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_title_forgot_my_password" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_register"
+                        style="@style/MaterialBottonStyleTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="18dp"
+                        android:padding="12dp"
+                        android:text="@string/register_login"
+                        android:textColor="@color/colorTextView"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_title_cadastre" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tv_email"
+                        style="@style/TextInputLayoutTheme"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="34dp"
+                        android:layout_marginEnd="18dp"
+                        app:errorEnabled="true"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_Passwor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_login">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tv_tiet_emali"
+                            style="@style/TextInputTextTheme"
+                            android:imeOptions="actionNext"
+                            android:inputType="textImeMultiLine"
+                            android:padding="12dp"
+                            android:textSize="18sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tv_Passwor"
+                        style="@style/TextInputLayoutTheme"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="26dp"
+                        android:layout_marginEnd="18dp"
+                        app:errorEnabled="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_email"
+                        app:passwordToggleEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tv_tiet_Passwor"
+                            style="@style/TextInputTextTheme"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPassword"
+                            android:padding="12dp"
+                            android:textSize="18sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!--This is the backdrop's content with a BottomSheetBehaviour applied to it-->
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:orientation="vertical"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            >
+
+
+            <!--This is the backdrop's header with a title and icon-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_list_header_background"
+                android:backgroundTint="@android:color/white"
+                android:elevation="5dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:strokeColor="@color/colorStrokeCardView"
+                app:strokeWidth="1dp"
+                tools:targetApi="lollipop">
+
+
+                <TextView
+                    android:id="@+id/tv_collect"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/quicksand_regular"
+                    android:gravity="center"
+                    android:text="@string/leitura_digital"
+                    android:textColor="@color/colorTitleTextView"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/errorText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <TextView
+                    android:id="@+id/errorText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/bg_row_background"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@+id/animation_view"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_collect"
+                    app:layout_constraintStart_toStartOf="@+id/tv_collect"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_collect" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animation_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/errorText"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/biometria" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

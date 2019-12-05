@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">Free Delivery Cliente</string>
+
+
+    <string name="title_toolbar_registratio_data">Dados cadastrais</string>
+    <string name="title_toolbar_parking_details">Detalhes do Mercado</string>
+
+    <!-- tela de mecado details andress -->
+    <string name="tv_title_parking_details_andress">Endereço</string>
+    <string name="tv_title_parking_telephone">Telefone</string>
+    <string name="tv_parking_payment_methods">Formas de pagamento</string>
+    <string name="tv_parking_time">Horário de funcionamento</string>
+    <string name="tv_title_share_rota">Traçar Rota</string>
+    <string name="tv_you_saved">Você economizou R$ 15,00\n (últimos 30 dias)</string>
+    <string name="tv_bonus_minutes">você ganhou 55 minutos\n (últimos 30 dias)</string>
+
+
+    <!-- titulos dos TextView da tela de perfil -->
+    <string name="tv_title_profile_Registration_data">Dados cadastrais</string>
+    <string name="tv_title_profile_my_cards">Meus cartões</string>
+    <string name="tv_title_profile_contact_us">Fale conosco</string>
+    <string name="tv_title_profile_about">Sobre o app</string>
+    <string name="tv_title_profile_use_terms">Termos de uso</string>
+    <string name="tv_title_profile_privacy">Políticas de privacidade</string>
+    <string name="title_toolbar_address">Cadastro Endereço</string>
+    <string name="tv_title_profile_exit">Sair</string>
+    <string name="tv_title_profile_ola">Olá,</string>
+
+
+    <string name="menu_gallery">ENDEREÇO</string>
+    <string name="menu_slideshow">PERFIL</string>
+    <string name="menu_tools">PRODUTOS</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="confirmar_senha">Confirmar Senha</string>
+    <string name="confirmar">CONFIRMAR</string>
+    <string name="cancelar">Cancelar</string>
+
+    <!-- tela de login e recuperção de senha,  -->
+    <string name="btn_log_in_login">ENTRAR</string>
+    <string name="tv_register_login_Not_registered_yet">Ainda não possui cadastro?</string>
+    <string name="tv_title_login">LOGIN</string>
+    <string name="password_login">Senha</string>
+    <string name="title_email_login">E-mail</string>
+    <string name="forgot_my_password_login">Esqueci minha senha!</string>
+    <string name="register_login">CADASTRE-SE</string>
+
+    <string name="input_qr_code">QR CODE</string>
+
+    <!-- tela de cadastro de enderço -->
+    <string name="tv_cep_name_address">CEP</string>
+    <string name="tv_public_place_address">Logradouro</string>
+    <string name="tv_number_address">Número</string>
+    <string name="tv_title_complement_address">Complemento</string>
+    <string name="tv_title_neighborhood_address">Bairro</string>
+    <string name="tv_title_city_address">Cidade</string>
+    <string name="tv_title_uf">UF</string>
+    <string name="tv_title_advance">AVANÇAR</string>
+
+
+    <string name="tv_title_DESCRIÇÂO">NOME: %s</string>
+    <string name="tv_title_QNT">QNT ITEM: %s</string>
+    <string name="tv_title_VALOR">VALOR: R$ %s</string>
+    <string name="tv_title_VALOR_Total">Valor Total: %s</string>
+    <string name="tv_title_description">DESCRIÇÂO: %s</string>
+    <string name="leitura_digital">Leitura digital</string>
+    <string name="refer_friend">Produtos Não Comfimados</string>
+    <string name="referpack">Produtos Comfimados</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mb_service_details">Compartilhar</string>
+    <string name="title_toolbar_about_the_app">Sobre app</string>
+
+    <!-- tela  temos de uso-->
+    <string name="Installed_version">Versão instalada</string>
+    <string name="title_toolbar_terms_of_use">Termos de uso</string>
+    <string name="tv_privacy_policies_and_terms_of_use">1.0</string>
+    <string name="tv_text_terms_of_use">\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        \nLorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, Lorem ipsum dolor sit amet.
+        \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        \nLorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, Lorem ipsum dolor sit amet.
+        \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</string>
+
+
+</resources>

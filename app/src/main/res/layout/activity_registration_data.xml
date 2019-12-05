@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.RegistrationDataActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/mt_toolbar_data_registrion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_arrow"
+        android:elevation="1dp"
+        app:title="@string/title_toolbar_registratio_data"
+        app:titleTextAppearance="@style/MaterialToolbarMenuStyleTheme"
+        app:titleTextColor="@color/color_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_board_description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mt_toolbar_data_registrion">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+    <EditText
+        android:id="@+id/tv_name22"
+        style="@style/MaterialEditTextTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="26dp"
+        android:textColor="@color/colorTextTextView"
+        android:fontFamily="@font/quicksand_regular"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_register"
+        tools:layout_editor_absoluteY="352dp" />
+
+    <TextView
+        android:id="@+id/tv_cpf"
+        style="@style/MaterialEditTextTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="26dp"
+        android:textColor="@color/colorTextTextView"
+        android:fontFamily="@font/quicksand_regular"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name22"
+        tools:layout_editor_absoluteY="352dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MaterialTexteViewTheme"
+        android:layout_marginBottom="8dp"
+        android:text="Nome completo"
+        app:layout_constraintBottom_toTopOf="@+id/tv_name_register"
+        app:layout_constraintStart_toStartOf="@+id/tv_name_register" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="CPF"
+        style="@style/MaterialTexteViewTheme"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_cpf"
+        app:layout_constraintStart_toStartOf="@+id/tv_cpf" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Como deseja ser chamado"
+        style="@style/MaterialTexteViewTheme"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_name22"
+        app:layout_constraintStart_toStartOf="@+id/tv_name22" />
+
+
+    <EditText
+        style="@style/MaterialEditTextTheme"
+        android:id="@+id/tv_name_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="26dp"
+        android:textColor="@color/colorTextTextView"
+        android:fontFamily="@font/quicksand_regular"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aciv_photo_user_detais" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Celular"
+        style="@style/MaterialTexteViewTheme"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_Celular"
+        app:layout_constraintStart_toStartOf="@+id/tv_Celular" />
+
+
+    <EditText
+        android:id="@+id/tv_Celular"
+        style="@style/MaterialEditTextTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="26dp"
+        android:fontFamily="@font/quicksand_regular"
+        android:padding="12dp"
+        android:textColor="@color/colorTextTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cpf" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_regist"
+        style="@style/MaterialButtonTheme"
+        android:text="CADASTRAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Celular"
+        app:strokeWidth="1dp" />
+
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/aciv_photo_user_detais"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_profile_picture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

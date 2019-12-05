@@ -1,0 +1,218 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+    <!-- Customizando os TextView -->
+    <style name="MaterialTextViewTheme" parent="Widget.MaterialComponents.TextView">
+        <item name="android:background">@drawable/button_edge</item>
+
+    </style>
+
+    <!-- Customizando os botoes de Ação de Confirmação  -->
+    <style name="MaterialButtonTheme" parent="Widget.MaterialComponents.Button">
+        <item name="fontFamily">@font/quicksand_bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="backgroundTint">@color/colorButtAction</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="strokeColor">@color/colorButtonAdapterAttendance</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">15dp</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:layout_marginBottom">32dp</item>
+        <item name="android:layout_width">164dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/btn_log_in_login</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Customizando cardview map-->
+    <style name="MaterialCardViewStyleTheme" parent="Widget.MaterialComponents.CardView">
+        <item name="android:textAllCaps">true</item>
+        <item name="strokeColor">#F54800</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">15dp</item>
+    </style>
+
+
+    <!-- Customizando os botoes do Ação login-->
+    <style name="MaterialBottonStyleTheme" parent="Widget.MaterialComponents.Button">
+        <item name="fontFamily">@font/quicksand_bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="backgroundTint">@android:color/white</item>
+        <item name="android:textColor">@color/colorTextButtonAdapete</item>
+        <item name="strokeColor">@color/colorButtonAdapterAttendance</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:textSize">12dp</item>
+        <item name="cornerRadius">15dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">24dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginBottom">24dp</item>
+        <item name="android:layout_marginEnd">40dp</item>
+        <item name="android:layout_marginStart">40dp</item>
+        <item name="android:layout_marginLeft">24dp</item>
+    </style>
+
+    <!-- Customizando os botoes do Ação de profile -->
+    <style name="MaterialBottonStylePtofileTheme" parent="Widget.MaterialComponents.Button">
+        <item name="fontFamily">@font/quicksand_bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="backgroundTint">@android:color/white</item>
+        <item name="android:textColor">@color/colorButtAction</item>
+        <item name="strokeColor">@color/colorTextButton</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:textSize">12dp</item>
+        <item name="cornerRadius">15dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">24dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginBottom">24dp</item>
+        <item name="android:layout_marginEnd">40dp</item>
+        <item name="android:layout_marginStart">40dp</item>
+        <item name="android:layout_marginLeft">24dp</item>
+    </style>
+
+    <!-- Customizando o Titulo do Toolbar Menu -->
+    <style name="MaterialToolbarMenuStyleTheme" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <item name="fontFamily">@font/quicksand_bold</item>
+        <item name="android:textColor">@color/color_toolbar_menu</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+    </style>
+
+    <!-- Customizando o Titulo do Toolbar Menu -->
+    <style name="MaterialToolbarMenuStyleThemescreens" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <item name="fontFamily">@font/quicksand_light</item>
+        <item name="android:textColor">@color/color_toolbar</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+    </style>
+
+    <!-- Customizando o TextView Menu Profile  -->
+    <style name="MaterialTexteViewTheme" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/quicksand_regular</item>
+        <item name="android:color">@color/colorNameTextView</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">26dp</item>
+    </style>
+
+    <!-- Customizando o View Menu Profile  -->
+    <style name="MaterialViewStyleTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginRight">22dp</item>
+        <item name="android:layout_marginTop">26dp</item>
+        <item name="android:layout_marginLeft">22dp</item>
+    </style>
+
+
+    <!-- Customizando os TextView tela registration-->
+    <style name="MaterialEditTextTheme" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/background_edittext</item>
+    </style>
+
+    <!-- Customizando os TextInputLayout de todas as telas  -->
+    <style name="MaterialEditTextThemed" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:layout_marginLeft">18dp</item>
+        <item name="android:layout_marginRight">18dp</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="boxStrokeWidth">0.80dp</item>
+        <item name="errorIconTint">@color/colorTextInputLayoutTheme</item>
+        <item name="errorTextColor">@color/colorTextInputLayoutTheme</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <!-- Customizando os CardView  -->
+    <style name="MaterialCardViewTheme" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@android:color/white</item>
+        <item name="cardCornerRadius">15dp</item>
+        <item name="strokeColor">@color/colorStrokeCardView</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <!-- Customizando todos os Inputs Text Layout's -->
+    <style name="TextInputTextTheme" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:textColor">#111</item>
+        <item name="hintTextColor">#111</item>
+        <item name="android:textColorHint">#111</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/button_edge</item>
+    </style>
+
+
+    <!-- Customizando todos os Inputs Text Layout's -->
+    <style name="TextInputLayoutTheme" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxCornerRadiusTopStart">0dp</item>
+        <item name="boxCornerRadiusTopEnd">0dp</item>
+        <item name="boxCornerRadiusBottomStart">0dp</item>
+        <item name="boxStrokeWidth">0.80dp</item>
+        <item name="boxCornerRadiusBottomEnd">0dp</item>
+        <item name="boxStrokeColor">@color/colorBorderBox</item>
+        <item name="boxBackgroundColor">@android:color/white</item>
+        <item name="errorIconTint">@color/colorBorderBox</item>
+        <item name="errorTextColor">@color/colorBorderBox</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    android:inputType="textCapWords"
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <!-- Customizando os TextView title guidance photo document -->
+    <style name="MaterialTitleTextViewGuidancePhotoTheme" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_marginLeft">18dp</item>
+        <item name="android:layout_marginRight">18dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textColor">@color/colorTitleTextView</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/quicksand_bold</item>
+
+    </style>
+
+    <!-- Customizando os TextView das telas de  Registration-->
+    <style name="MaterialTextRegistration" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:fontFamily">@font/quicksand_regular</item>
+
+    </style>
+
+
+
+</resources>
