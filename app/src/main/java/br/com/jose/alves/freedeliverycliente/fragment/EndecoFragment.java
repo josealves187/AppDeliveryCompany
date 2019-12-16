@@ -4,7 +4,6 @@ package br.com.jose.alves.freedeliverycliente.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
-import android.text.InputType;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -78,7 +77,7 @@ public class EndecoFragment extends Fragment implements EnderecoListeners {
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         list.setLayoutManager(new LinearLayoutManager(getContext()));
-        adapterEndereco = new AdapteterEndereco(endereco, this);
+        adapterEndereco = new AdapteterEndereco(endereco, getActivity(),this );
         list.addItemDecoration(new DividerItemDecoration(list.getContext(), layoutManager.getOrientation()));
         list.setAdapter(adapterEndereco);
 

@@ -1,8 +1,5 @@
 package br.com.jose.alves.freedeliverycliente.Activity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -18,6 +15,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -114,7 +114,7 @@ public class RegistrationDataActivity extends AppCompatActivity {
 
     private void recueperarDadosUsuario() {
         DatabaseReference user = firebaseRef
-                .child("UsuarioComu")
+                .child("UsuarioProfile")
                 .child(idUsuarioLogado);
         user.addValueEventListener(new ValueEventListener() {
             @Override

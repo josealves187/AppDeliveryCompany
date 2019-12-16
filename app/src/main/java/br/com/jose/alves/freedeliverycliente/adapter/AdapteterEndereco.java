@@ -1,11 +1,19 @@
 package br.com.jose.alves.freedeliverycliente.adapter;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.graphics.Typeface;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -17,10 +25,13 @@ import br.com.jose.alves.freedeliverycliente.model.Address;
 public class AdapteterEndereco extends RecyclerView.Adapter<AdapteterEndereco.MyViewHolder> {
 
     private List<Address> addresses;
+    private Context context;
     private EnderecoListeners historicListener;
 
-    public AdapteterEndereco(List<Address> addresses, EnderecoListeners historicListener) {
+
+    public AdapteterEndereco(List<Address> addresses, Context context, EnderecoListeners historicListener) {
         this.addresses = addresses;
+        this.context = context;
         this.historicListener = historicListener;
     }
 
@@ -32,23 +43,44 @@ public class AdapteterEndereco extends RecyclerView.Adapter<AdapteterEndereco.My
         return new MyViewHolder(itemLista);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int i) {
 
 
         Address address = addresses.get(i);
-        holder.cep.setText(address.getCep());
-        holder.rua.setText(address.getLogradouro());
-        holder.complemento.setText(address.getComplemento());
-        holder.cidade.setText(address.getLocalidade());
-        holder.estado.setText(address.getUf());
-        holder.bairro.setText(address.getBairro());
-        holder.numero.setText(address.getNumero());
-//        holder.phone.setText(address.getPhone());
-//        holder.storyName.setText(address.getStoreName());
+        holder.storyName.setText(address.getStoreName());
         OnClickListener(holder, i);
 
+        SpannableString ss = new SpannableString(context.getString(R.string.address,address.getLogradouro() + ", " + address.getNumero() + " - " +
+                address.getBairro() + ", " + address.getLocalidade() + " - " + address.getUf() + ", " + address.getCep()));
 
+        ss.setSpan(new ForegroundColorSpan(ContextCompat.getColor(context,R.color.colorborder)), 0, 9, 0);
+
+
+        ss.setSpan(
+                new StyleSpan(Typeface.BOLD),
+                0,
+                9,
+                Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+        );
+
+
+        holder.rua.setText(ss);
+
+        SpannableString sss = new SpannableString(context.getString(R.string.phone,address.getPhone()));
+        sss.setSpan(new ForegroundColorSpan(ContextCompat.getColor(context,R.color.colorborder)), 0, 9, 0);
+
+
+        sss.setSpan(
+                new StyleSpan(Typeface.BOLD),
+                0,
+                9,
+                Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+        );
+
+
+        holder.phone.setText(sss);
     }
 
     private void OnClickListener(@NonNull final MyViewHolder holder, final int position) {
@@ -70,29 +102,20 @@ public class AdapteterEndereco extends RecyclerView.Adapter<AdapteterEndereco.My
     class MyViewHolder extends RecyclerView.ViewHolder {
 
 
-        TextView estado;
-        TextView bairro;
-        TextView cep;
         TextView rua;
-        TextView complemento;
-        TextView cidade;
-        TextView numero;
         TextView ver;
-//        TextView phone;
-//        TextView storyName;
+        TextView phone;
+        TextView storyName;
 
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
+
             rua = itemView.findViewById(R.id.textNomeRua);
-            bairro = itemView.findViewById(R.id.textbairro);
-            complemento = itemView.findViewById(R.id.textcomplemento);
-            cidade = itemView.findViewById(R.id.textcidade);
-            cep = itemView.findViewById(R.id.textcep);
-            estado = itemView.findViewById(R.id.textestado);
-            numero = itemView.findViewById(R.id.textnumero);
             ver = itemView.findViewById(R.id.ver);
+            storyName = itemView.findViewById(R.id.storyName);
+            phone = itemView.findViewById(R.id.tv_phone);
 
         }
     }

@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         super.onResume();
 
         SharedPreferences preferences = getSharedPreferences("PARKOK", MODE_PRIVATE);
-        int screenOrigin = preferences.getInt("SCREEN_ORIGEN", 0);
+        int screenOrigin = preferences.getInt("SCREEN_ORIGEN", 1);
 
         switch (screenOrigin) {
             case 1:

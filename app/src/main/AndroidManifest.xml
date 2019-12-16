@@ -25,10 +25,6 @@
             android:name=".Activity.CadastroActivityDados"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.SimpleSlideActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Intro" />
-        <activity
             android:name=".Activity.RegistroActivity"
             android:parentActivityName=".Activity.LoginActivity"
             android:screenOrientation="portrait" />

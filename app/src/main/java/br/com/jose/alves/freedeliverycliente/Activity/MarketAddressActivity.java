@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,8 +31,10 @@ public class MarketAddressActivity extends AppCompatActivity {
     private RecyclerView rcvDayTime;
     private MaterialButton mbmShare;
     private TextView tvParkingAndress;
+    private TextView tv_parking_telephone;
     private MaterialToolbar mtToolbarDetails;
     private ImageView iv_mt_parking_details;
+    private TextView tv_title_parking_details;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,8 @@ public class MarketAddressActivity extends AppCompatActivity {
             tvParkingAndress.setText(address.getLogradouro() + ", " + address.getNumero() + " - " +
                     address.getBairro() + ", " + address.getLocalidade() + " - " + address.getUf() + ", " + address.getCep());
 
+            tv_parking_telephone.setText(address.getPhone());
+            tv_title_parking_details.setText(address.getStoreName());
 
             List<String> payment = new ArrayList<>();
             payment.add(("Dinheiro"));
@@ -107,6 +110,8 @@ public class MarketAddressActivity extends AppCompatActivity {
         mbmShare = findViewById(R.id.mbm_check_share);
         tvParkingAndress = findViewById(R.id.tv_parking_andress);
         iv_mt_parking_details = findViewById(R.id.iv_mt_parking_details);
+        tv_parking_telephone = findViewById(R.id.tv_parking_telephone);
+        tv_title_parking_details = findViewById(R.id.tv_title_parking_details);
 
         //ADD Toobar
         mtToolbarDetails = findViewById(R.id.mt_toolbar_parking_details);

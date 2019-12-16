@@ -4,183 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="16dp"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?android:attr/selectableItemBackground"
     app:cardCornerRadius="10dp"
     app:cardElevation="5dp"
     app:strokeColor="@color/colorStrokeCardView"
-    app:strokeWidth="1dp"
-    android:layout_margin="16dp">
+    app:strokeWidth="1dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="12dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_marginTop="12dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Rua: "
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:id="@+id/textNomeRua"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Rua"
-                            android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="Bairro: "
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:id="@+id/textbairro"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="bairro   "
-                            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/textNomeRua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/quicksand_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Rua" />
 
 
-                    </LinearLayout>
+        <TextView
+            android:id="@+id/storyName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            tools:text="Nome Loja"
+            android:textSize="16sp"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:fontFamily="@font/quicksand_bold"
+            app:layout_constraintEnd_toEndOf="@+id/textNomeRua"
+            app:layout_constraintStart_toStartOf="@+id/textNomeRua"
+            app:layout_constraintTop_toBottomOf="@+id/textNomeRua" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Cep:"
-                            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Nome Loja"
+            android:fontFamily="@font/quicksand_regular"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/storyName"
+            app:layout_constraintStart_toStartOf="@+id/storyName"
+            app:layout_constraintTop_toBottomOf="@+id/storyName" />
 
-                        <TextView
-                            android:id="@+id/textcep"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            android:text="cep"
-                            android:textSize="16sp" />
-
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="16sp"
-                            android:text="Complemento:  " />
-
-                        <TextView
-                            android:id="@+id/textcomplemento"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:textSize="16sp"
-                            android:text="complemento" />
-
-                        <TextView
-                            android:id="@+id/textnumero"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            android:layout_weight="1"
-                            android:text="N°" />
+        <TextView
+            android:id="@+id/ver"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="end"
+            android:text="ver detalhes"
+            android:textAllCaps="true"
+            android:textColor="@color/colorTitleTextView"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_phone"
+            app:layout_constraintStart_toStartOf="@+id/tv_phone"
+            app:layout_constraintTop_toBottomOf="@+id/tv_phone" />
 
 
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="16sp"
-                            android:text="Cidade:" />
-
-                        <TextView
-                            android:id="@+id/textcidade"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            android:textSize="16sp"
-                            android:layout_weight="1"
-                            android:text="cidade" />
-
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="16sp"
-                            android:text="Estado:" />
-                        <TextView
-                            android:id="@+id/textestado"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            android:textSize="16sp"
-                            android:layout_weight="1"
-                            android:text="estado" />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/ver"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorTitleTextView"
-                        android:fontFamily="@font/quicksand_bold"
-                        android:textSize="14sp"
-                        android:textAllCaps="true"
-                        android:layout_margin="18dp"
-                        android:layout_gravity="end"
-                        android:text="ver detalhes" />
-
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </com.google.android.material.card.MaterialCardView>

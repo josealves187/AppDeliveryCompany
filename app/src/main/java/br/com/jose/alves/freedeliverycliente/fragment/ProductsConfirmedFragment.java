@@ -4,7 +4,6 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -44,11 +43,9 @@ import br.com.jose.alves.freedeliverycliente.adapter.ReceiveMerchandiseAdapter;
 import br.com.jose.alves.freedeliverycliente.listen.RecyclerItemClickListener;
 import br.com.jose.alves.freedeliverycliente.model.ItemPurchase;
 import br.com.jose.alves.freedeliverycliente.util.ConfiguracaoFirebase;
-import br.com.jose.alves.freedeliverycliente.util.UsuarioFirebase;
 import pub.devrel.easypermissions.EasyPermissions;
 
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
-import static android.content.Context.MODE_PRIVATE;
 
 public class ProductsConfirmedFragment extends Fragment {
 
@@ -103,7 +100,7 @@ public class ProductsConfirmedFragment extends Fragment {
                     public void onLongItemClick(View view, final int position) {
                         final ItemPurchase pedido = merchandises.get(position);
                         AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
-                        dialog.setTitle("Excluir o produtor");
+                        dialog.setTitle("Confirmar a entregar do produtor");
                         dialog.setMessage("Finaliza entregar: " + pedido.getName() + " ?");
                         dialog.setPositiveButton("sim", new DialogInterface.OnClickListener() {
                             @Override
@@ -111,7 +108,7 @@ public class ProductsConfirmedFragment extends Fragment {
                                 if (merchandises.remove(pedido)) {
                                     removePedidos();
                                     Toast.makeText(getActivity(),
-                                            "Produto Excluido!!",
+                                            "Produto confirmardo!!",
                                             Toast.LENGTH_SHORT)
                                             .show();
                                 }
@@ -264,14 +261,17 @@ public class ProductsConfirmedFragment extends Fragment {
 
         Uri uri = Uri.fromFile(imagePath);
         Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-        sharingIntent.setType("image/*");
-        String shareBody = "Histórico de atendimento";
-        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Histórico de atendimento\n" +
-                "Compartilhado pelo APP");
+        sharingIntent.setType("message/rfc822");
+        String shareBody = "Histórico de compra que não vieram";
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Compartilhado pelo APP");
         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
         sharingIntent.putExtra(Intent.EXTRA_STREAM, uri);
+        sharingIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"atmconsultoria@gmail.com" } );
 
         startActivity(Intent.createChooser(sharingIntent, "Escolha App de compartilhamento"));
+
+
+
     }
 
     private void initializeFindViewById(View view) {

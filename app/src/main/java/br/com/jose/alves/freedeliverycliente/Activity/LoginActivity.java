@@ -17,6 +17,7 @@ import android.security.keystore.KeyProperties;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +32,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
@@ -40,7 +42,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.io.IOException;
@@ -52,6 +53,8 @@ import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
 import java.security.UnrecoverableKeyException;
 import java.security.cert.CertificateException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
@@ -63,6 +66,9 @@ import br.com.jose.alves.freedeliverycliente.R;
 import br.com.jose.alves.freedeliverycliente.model.User;
 import br.com.jose.alves.freedeliverycliente.util.ConfiguracaoFirebase;
 import br.com.jose.alves.freedeliverycliente.util.FingerprintHandler;
+import br.com.jose.alves.freedeliverycliente.util.Validation.StandardValidation;
+import br.com.jose.alves.freedeliverycliente.util.Validation.ValidateEmail;
+import br.com.jose.alves.freedeliverycliente.util.Validation.Validator;
 
 @RequiresApi(api = Build.VERSION_CODES.M)
 public class LoginActivity extends AppCompatActivity {
@@ -73,6 +79,8 @@ public class LoginActivity extends AppCompatActivity {
     private MaterialButton btnLoginLog;
     private MaterialButton btnRegister;
     private TextView EqueciMinhaSe;
+
+    private final List<Validator> validadores = new ArrayList<>();
     //Recuperando Botoes do layout Recupera senha
     private BootstrapButton btnSendEmail;
     private BootstrapButton btnCancelResgSen;
@@ -207,6 +215,56 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
+
+    /// Validando email
+    private void setEmailField(){
+        TextInputLayout textInputEmai = findViewById(R.id.tv_email);
+        EditText setEmail = textInputEmai.getEditText();
+        final ValidateEmail validate = new ValidateEmail(textInputEmai);
+        validadores.add(validate);
+        setEmail.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus){
+                    validate.isValid();
+                }
+            }
+        });
+    }
+
+    // Validando senha
+    private void configureFieldPassword() {
+        TextInputLayout textInputSenha = findViewById(R.id.tv_Passwor);
+        addStandardValidation(textInputSenha);
+    }
+
+    private boolean validaTodosCampos(){
+        boolean formularioEstaValido = true;
+        for (Validator validador :
+                validadores) {
+            if(!validador.isValid()){
+                formularioEstaValido = false;
+            }
+        }
+        return formularioEstaValido;
+    }
+
+
+    private void addStandardValidation(final TextInputLayout textInputCampo) {
+        final EditText campo = textInputCampo.getEditText();
+        final StandardValidation validador = new StandardValidation(textInputCampo);
+        validadores.add(validador);
+        campo.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+
+                if (!hasFocus) {
+                    validador.isValid();
+                }
+            }
+        });
+    }
+
     private void verificarUsuarioLogado() {
 
         autenticacao = FirebaseAuth.getInstance();
@@ -229,7 +287,12 @@ public class LoginActivity extends AppCompatActivity {
         btnLoginLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validarAutenticacaoUsuario();
+                //Estou chamado o RegistroActivity
+                boolean formularioEstaValido = validaTodosCampos();
+                if(formularioEstaValido){
+                    validarAutenticacaoUsuario();
+                }
+
             }
         });
 
@@ -281,6 +344,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void inicializaComponentes() {
+        setEmailField();
+        configureFieldPassword();
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         tvEmailLog = findViewById(R.id.tv_tiet_emali);
         btnRegister = findViewById(R.id.btn_register);
@@ -300,9 +365,11 @@ public class LoginActivity extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Estou chamado o RegistroActivity
-                Intent i = new Intent(LoginActivity.this, RegistroActivity.class);
-                startActivity(i);
+
+                    Intent i = new Intent(LoginActivity.this, RegistroActivity.class);
+                    startActivity(i);
+
+
             }
         });
 
